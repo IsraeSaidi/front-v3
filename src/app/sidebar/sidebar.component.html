@@ -1,0 +1,170 @@
+
+
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed':''"style="z-index: 11;">
+    <div class="logo-container">
+        <button class="btn-close"  mat-fab *ngIf="!collapsed"  (click)="toggleCollapse()">
+            <mat-icon class="icon">chevron_right</mat-icon>
+        </button>
+        
+        <button class="btn-close" mat-fab  aria-label="Example icon button with a delete icon" *ngIf="collapsed" (click)="closeSidenav()">
+            <mat-icon class="icon">keyboard_backspace</mat-icon>
+          </button>
+  
+    </div>
+    <ul *ngIf="!collapsed" class="sidenav-nav">
+        <li  class="sidenav-nav-item" [routerLink]="['/accueil']" routerLinkActive="router-link-active" >
+            <a class="sidenav-nav-link" routerLinkActive="active">
+                <mat-icon class="sidenav-link-icon">extension</mat-icon>
+            </a>
+  
+        </li> 
+        
+        <li  class="sidenav-nav-item" [routerLink]="['/societe']" routerLinkActive="router-link-active" >
+            <a class="sidenav-nav-link" routerLinkActive="active">
+                <mat-icon class="sidenav-link-icon">event_seat</mat-icon>
+                <!-- <span class="sidenav-link-text" *ngIf="collapsed">Categorie
+                </span> -->
+            </a>
+  
+        </li>
+        
+        <li  class="sidenav-nav-item" [routerLink]="['/fournisseur']" routerLinkActive="router-link-active" >
+            <a class="sidenav-nav-link" routerLinkActive="active">
+                <mat-icon class="sidenav-link-icon">business</mat-icon>
+                <!-- <span class="sidenav-link-text" *ngIf="collapsed">Categorie
+                </span> -->
+            </a>
+  
+        </li>
+        <li  class="sidenav-nav-item" [routerLink]="['/livraison']" routerLinkActive="router-link-active" >
+            <a class="sidenav-nav-link" routerLinkActive="active">
+                <mat-icon class="sidenav-link-icon">local_shipping</mat-icon>
+                <!-- <span class="sidenav-link-text" *ngIf="collapsed">Categorie
+                </span> -->
+            </a>
+  
+        </li>
+        <li  class="sidenav-nav-item" [routerLink]="['/client']" routerLinkActive="router-link-active" >
+            <a class="sidenav-nav-link"
+            routerLinkActive="active"
+            >
+                <mat-icon class="sidenav-link-icon">account_circle</mat-icon>
+                <!-- <span class="sidenav-link-text" *ngIf="collapsed">Sous Catégorie
+                </span> -->
+            </a>
+  
+        </li>
+        
+        <li  class="sidenav-nav-item" [routerLink]="['/commande']" routerLinkActive="router-link-active" >
+            <a class="sidenav-nav-link"
+            routerLinkActive="active"
+            >
+                <mat-icon class="sidenav-link-icon">list_alt</mat-icon>
+                <!-- <span class="sidenav-link-text" *ngIf="collapsed">Sous Catégorie
+                </span> -->
+            </a>
+  
+        </li>
+        <li  class="sidenav-nav-item" [routerLink]="['/article']" routerLinkActive="router-link-active" >
+            <a class="sidenav-nav-link"
+            routerLinkActive="active"
+            >
+                <mat-icon class="sidenav-link-icon">store</mat-icon>
+                <!-- <span class="sidenav-link-text" *ngIf="collapsed">Sous Catégorie
+                </span> -->
+            </a>
+  
+        </li>
+        <li style="margin-top: 20vh;"   class="sidenav-nav-item" [routerLink]="['/help']" routerLinkActive="router-link-active" >
+            <a  class="sidenav-nav-link" routerLinkActive="active">
+                <mat-icon class="sidenav-link-icon">help_outline</mat-icon>
+  
+            </a>
+  
+        </li>
+  
+  
+  
+    </ul>
+    <div *ngIf="collapsed" style="width:100%;height:100%;">
+        <img src=".\assets\images\logo.png" class="logoLSI" alt="logo">
+        <ul style="width: 175px;position: absolute;left: 67px;top: 240px;">
+            <li  class="sidenav-nav-item" [routerLink]="['/accueil']" routerLinkActive="router-link-active" >
+                <a class="sidenav-nav-link"
+                routerLinkActive="active">
+                    <mat-icon class="sidenav-link-icon">extension</mat-icon>
+                    <span class="sidenav-link-text" >Accueil
+                    </span>
+                </a>
+            </li>
+            <li  class="sidenav-nav-item" [routerLink]="['/societe']" routerLinkActive="router-link-active" >
+                <a class="sidenav-nav-link"
+                routerLinkActive="active">
+                    <mat-icon class="sidenav-link-icon">event_seat</mat-icon>
+                    <span class="sidenav-link-text" >Societe
+                    </span>
+                </a>
+            </li>
+            <li class="sidenav-nav-item" [routerLink]="['/fournisseur']" routerLinkActive="router-link-active">
+                <a class="sidenav-nav-link"
+                routerLinkActive="active">
+                    <mat-icon class="sidenav-link-icon"> business</mat-icon>
+                    <span class="sidenav-link-text" >Fournisseur
+                    </span>
+                </a>   
+            </li>
+            <li class="sidenav-nav-item" [routerLink]="['/livraison']" routerLinkActive="router-link-active">
+                <a class="sidenav-nav-link"
+                routerLinkActive="active">
+                    <mat-icon class="sidenav-link-icon">local_shipping</mat-icon>
+                    <span class="sidenav-link-text" >Livraison
+                    </span>
+                </a>   
+            </li>
+            
+            
+            <li  class="sidenav-nav-item" [routerLink]="['/client']" routerLinkActive="router-link-active" >
+                <a class="sidenav-nav-link"
+                routerLinkActive="active" 
+                >
+                    <mat-icon class="sidenav-link-icon">account_circle</mat-icon>
+                    <span class="sidenav-link-text" >Client
+                    </span>
+                </a>
+    
+            </li>
+            <li  class="sidenav-nav-item" [routerLink]="['/commande']" routerLinkActive="router-link-active" >
+                <a class="sidenav-nav-link"
+                routerLinkActive="active" 
+                >
+                    <mat-icon class="sidenav-link-icon">list_alt</mat-icon>
+                    <span class="sidenav-link-text" >Commandes
+                    </span>
+                </a>
+    
+            </li>
+            <li  class="sidenav-nav-item" [routerLink]="['/article']" routerLinkActive="router-link-active" >
+                <a class="sidenav-nav-link"
+                routerLinkActive="active" 
+                >
+                    <mat-icon class="sidenav-link-icon">store</mat-icon>
+                    <span class="sidenav-link-text" >Article
+                    </span>
+                </a>
+    
+            </li>   
+    
+    
+ 
+            <li    class="sidenav-nav-item" [routerLink]="['/help']" routerLinkActive="router-link-active" >
+                <a  class="sidenav-nav-link" routerLinkActive="active">
+                    <mat-icon class="sidenav-link-icon">help_outline</mat-icon>
+                    <span class="sidenav-link-text" >About
+                    </span>
+                </a>
+    
+            </li>
+        </ul>
+    </div>
+  </div>
+  

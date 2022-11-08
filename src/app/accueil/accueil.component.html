@@ -1,0 +1,110 @@
+
+
+<mat-grid-list cols="5" rowHeight="100vh" >
+  <mat-grid-tile colspan="2" style="margin:0 50px;">
+    <div style="width: 55%;">
+    <h1 class="titre">Gerer Votre Mini-Market Avec <span style="color: #9B59B6;">LSI Gestion</span></h1>
+    <br>
+    <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos modi consequatur, architecto accusantium sunt adipisci </p>
+    <br>
+    <button class="plus" mat-raised-button color="primary">Plus</button>
+  </div>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="3"  class="accueil" style="position:relative ;">
+      <img src=".\assets\images\accueil1.png"  class="image">
+      <img src=".\assets\images\image2.png"  class="image2">
+      <img src=".\assets\images\image3.png"  class="image3">
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-divider></mat-divider>
+<br>
+<div style="margin:0 12%">
+    <br>
+    <p  class="titre2">Que vous apporte <span style="color: #9B59B6;">LSI Gestion</span> ?</p>
+    <br>
+    <br>
+    <mat-grid-list  cols="3" rowHeight="50vh" [gutterSize]="'30px'" >
+      <mat-grid-tile class="box">
+        <img src=".\assets\images\logo1.png"  data-aos="zoom-in" data-aos-duration="1500">
+        <br>
+        <h3 class="h3" data-aos="zoom-in" data-aos-duration="1500">Beautiful User Interface</h3>
+        <br>
+        <p  class="text1" data-aos="zoom-in" data-aos-duration="1500">Des palettes de couleurs  et des interfaces au design minimaliste rendent l'expÃ©rience utilisateur plus confortable.</p>
+      </mat-grid-tile>
+      <mat-grid-tile class="box" >
+        <img src=".\assets\images\logo2.png" data-aos="zoom-in" data-aos-duration="1500">
+        <br>
+        <h3 class="h3" data-aos="zoom-in" data-aos-duration="1500">Modern Technology Stack</h3>
+        <br>
+        <p class="text1" data-aos="zoom-in" data-aos-duration="1500">La technologie derriÃ¨re <span style="color: #9B59B6;">LSI Gestion</span> est moins compliquÃ©e</p>
+      </mat-grid-tile>
+      <mat-grid-tile class="box">
+        <img src=".\assets\images\logo3.png" data-aos-duration="1500" data-aos="zoom-in">
+        <br>
+        <h3 class="h3" data-aos="zoom-in" data-aos-duration="1500">Performance Centric</h3>
+        <br>
+        <p  class="text1" data-aos="zoom-in" data-aos-duration="1500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad magnam voluptate repudiandae explicabo! Blanditiis</p>
+      </mat-grid-tile>
+    </mat-grid-list>
+</div>
+<br>
+<br>
+<mat-divider></mat-divider>
+<div style="margin:0 12%">
+  <br>
+  <br>
+  <p class="titre2"  >En savoir plus sur <span style="color: #9B59B6;">LSI Gestion</span> :</p>
+
+  <mat-grid-list  cols="2" rowHeight="50vh"  [gutterSize]="'60px'">
+    <mat-grid-tile >
+      <p class="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis aperiam iure quibusdam iusto soluta ipsam, perspiciatis earum, maiores culpa architecto eius quae quisquam, illo odio est sed maxime temporibus magni.</p>
+
+    </mat-grid-tile>
+
+    <mat-grid-tile >
+
+      <img src=".\assets\images\Untitled.jpeg"  class="gestion1">
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <mat-grid-list  cols="2" rowHeight="50vh"  [gutterSize]="'60px'">
+
+    <mat-grid-tile >
+
+      <img src=".\assets\images\Untitled2.jpeg"  class="gestion2">
+    </mat-grid-tile>
+    <mat-grid-tile >
+      <p class="p1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate totam ab amet ipsum eaque quod explicabo voluptatum quia, et laudantium obcaecati aliquam dolores fuga ipsa ad provident! Aliquam, fugiat tempore.</p>
+
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+<div class="subscribe" >
+<div class="insideSubscribe">
+      <img src=".\assets\images\decor.jpeg" class="imgSub"  >
+      <div class="inputSub" >
+            <p style="font-size: 2.125rem;color: rgb(33, 33, 33);font-weight: 700;font-family: Roboto, sans-serif;line-height: 1.167;">Subscribe</p>
+            <br>
+            <p style="margin: 0px;letter-spacing: 0em;font-weight: 400;line-height: 1.5em;color: rgb(97, 97, 97);font-family: Roboto, sans-serif;font-size: 0.875rem;">Abonnez-vous pour les derniÃ¨res nouvelles et mises Ã  jour du modÃ¨le LSI Gestion.</p>
+            <br>
+            <mat-form-field appearance="fill">
+              <mat-label class="label">Email Address</mat-label>
+              <input #emailInput  matInput placeholder=""  name="codeCli"  />
+              <mat-icon matSuffix class="green-icon">mail_outline</mat-icon>
+          </mat-form-field>
+          <button (click)="click()"  class="plus" style="width:25% ;padding: 0;" mat-raised-button color="primary">Subscribe</button>
+          </div>
+</div>
+</div>
+
+<div class="footer">
+<div style="width: 30%;">
+<h1 style="color: white;padding:0 10vw;font-size: 2.125rem;font-weight: 700;font-family: Roboto, sans-serif;line-height: 1.167;margin-bottom: 0px;">LSI Gestion</h1>
+</div>
+<div style="display:flex ;justify-content:flex-end ;align-items:flex-start ;width: 70%;padding-right: 8%;box-sizing: border-box;">
+      <img src=".\assets\images\fb.jpeg"  >
+      <img src=".\assets\images\insta.jpeg"  >
+      <img src=".\assets\images\twiter.jpeg"  >
+</div>
+</div>
+

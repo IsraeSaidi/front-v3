@@ -1,0 +1,36 @@
+<diV style="padding:10vh 10vw 0">
+    <mat-accordion   class="example-headers-align" multi>
+        <mat-expansion-panel class="panel" *ngFor="let livraison of array">
+        <mat-expansion-panel-header>
+            <mat-panel-title style="color: rgb(47, 45, 45);font-size:1.3vw;">
+            {{livraison.nomFour}},   {{livraison.codeFour}}
+            </mat-panel-title>
+            <mat-panel-description style="color: rgb(47, 45, 45);font-size:1.3vw">
+            Livraison
+            <mat-icon>list_alt</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <br>
+        <mat-selection-list #shoes [multiple]="false">
+            <div  style="display: flex;justify-content: space-between;align-items: center;"  *ngFor="let ligne of livraison.livraisons" >
+             
+              <mat-list-option (click)="getLigneLivraisons(ligne.numLiv)" >
+                <div style="display: flex;justify-content: space-between;align-items: center;" >
+                <p>Code : {{ligne.numLiv}}</p>
+                <p>{{ligne.date}}</p>
+  
+              </div>
+              </mat-list-option>
+              <button  (click)="deleteLiv(ligne.numLiv)" style="background: #9B59B6;" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+            </mat-selection-list>
+            
+  
+            
+          </mat-expansion-panel>
+      </mat-accordion>
+      
+  </diV>
+  

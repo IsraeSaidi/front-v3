@@ -1,0 +1,24 @@
+<p style="text-align:center;font-family: 'Oleo Script Swash Caps';font-size: 30px">Modifier Article <span style="color:#9B59B6 ;"> {{model.codeArticle}}</span>  </p>
+<mat-divider></mat-divider>
+<br>
+<form (submit)="UpdateArticle()">
+
+
+    <mat-form-field appearance="fill">
+        <mat-label>Nom Article</mat-label>
+        <input #nomArtInput matInput placeholder="Placeholder" placeholder=""  name="nomCli"  [(ngModel)]="model.nomArt">
+        <mat-icon matSuffix class="green-icon">subtitles</mat-icon>
+        
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>PU</mat-label>
+        <input #puInput matInput placeholder="Placeholder" placeholder="" name="preCli"  [(ngModel)]="model.pu" >
+        <mat-icon matSuffix class="green-icon">monetization_on</mat-icon>
+        
+      </mat-form-field>
+     
+     <br> 
+    <button type="submit" mat-dialog-close  mat-raised-button color="primary" class="add-button">
+        Modifier
+    </button>
+</form>

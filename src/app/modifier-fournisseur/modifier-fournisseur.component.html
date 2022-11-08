@@ -1,0 +1,29 @@
+<p style="text-align:center;font-family: 'Oleo Script Swash Caps';font-size: 30px">Modifier Fournisseur<span style="color:#9B59B6 ;"> {{model.nomFour}}</span>  </p>
+<mat-divider></mat-divider>
+<br>
+<form (submit)=" modifierFournisseur()">
+
+
+    <mat-form-field appearance="fill">
+        <mat-label>Nom</mat-label>
+        <input #inputnomFour matInput placeholder="Placeholder" placeholder=""  name="nomFour"  [(ngModel)]="model.nomFour">
+        <mat-icon matSuffix class="green-icon">sentiment_very_satisfied</mat-icon>
+        
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Tel</mat-label>
+        <input #inputTelFour matInput placeholder="Placeholder" placeholder="" name="telFour"  [(ngModel)]="model.telFour" >
+        <mat-icon matSuffix class="green-icon">sentiment_very_satisfied</mat-icon>
+        
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Ville</mat-label>
+        <input #inputVilleFour matInput placeholder="Placeholder" placeholder="" name="villeFour"  [(ngModel)]="model.villeFour" >
+        <mat-icon matSuffix class="green-icon">home</mat-icon>
+        
+      </mat-form-field>
+ 
+      <button type="submit" mat-dialog-close  mat-raised-button color="primary" class="add-button">
+        Modifier
+    </button>
+</form>

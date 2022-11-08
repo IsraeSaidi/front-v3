@@ -1,0 +1,47 @@
+<div style="margin: 22px;border-radius: 12px;">
+    <p style="text-align:center;font-family: 'Oleo Script Swash Caps';font-size: 30px">Modifier Societe<span style="color:#9B59B6 ;"> {{model.nomSte}}</span>  </p>
+    <mat-divider></mat-divider>
+    <br>
+<form (submit)="updateSociete()">
+
+
+    <mat-form-field appearance="fill">
+        <mat-label>Fax societe</mat-label>
+        <input #inputFaxSte matInput placeholder="Placeholder" placeholder=""  name="faxSte"  [(ngModel)]="model.faxSte">
+        <mat-icon matSuffix class="green-icon">shopping_basket</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>tel societe</mat-label>
+        <input #inputTelSte matInput placeholder="Placeholder" placeholder=""  name="telSte"  [(ngModel)]="model.telSte">
+        <mat-icon matSuffix class="green-icon">shopping_basket</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>ville societe</mat-label>
+        <input #inputFaxSte matInput placeholder="Placeholder" placeholder=""  name="villeSte"  [(ngModel)]="model.villeSte">
+        <mat-icon matSuffix class="green-icon">shopping_basket</mat-icon>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Code Article</mat-label>
+        <mat-select   name="codeArticle" (ngModelChange)="selectItem($event)"  [(ngModel)]="modelFournisseur.codeFour">
+          <mat-option [value]="this.modelFournisseur.codeFour">{{nomFour}}</mat-option>
+          <mat-option *ngFor="let fournisseur of listeFournisseur" [value]="fournisseur.codeFour">
+            {{fournisseur.nomFour}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <!-- <mat-form-field appearance="fill">
+        <mat-label>Code Article</mat-label>
+        <input #prenomInput matInput placeholder="Placeholder" placeholder="" name="codeArticle"  [(ngModel)]="modelArticle.codeArticle" >
+        <mat-icon matSuffix class="green-icon">code</mat-icon>
+        
+      </mat-form-field> -->
+      <br>
+
+    <button mat-dialog-close type="submit"  mat-raised-button color="primary" class="add-button">
+        Modifier
+    </button>
+</form>
+</div>

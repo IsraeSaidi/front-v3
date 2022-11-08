@@ -1,0 +1,40 @@
+<p style="text-align:center;font-family: 'Oleo Script Swash Caps';font-size: 30px">Modifier Client<span style="color:#9B59B6 ;"> {{model.codeCli}}</span>  </p>
+<mat-divider></mat-divider>
+<br>
+<form (submit)="UpdateClient()">
+
+
+    <mat-form-field appearance="fill">
+        <mat-label>Nom</mat-label>
+        <input #nomInput matInput placeholder="Placeholder" placeholder=""  name="nomCli"  [(ngModel)]="model.nomCli">
+        <mat-icon matSuffix class="green-icon">sentiment_very_satisfied</mat-icon>
+        
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Prenom</mat-label>
+        <input #prenomInput matInput placeholder="Placeholder" placeholder="" name="preCli"  [(ngModel)]="model.preCli" >
+        <mat-icon matSuffix class="green-icon">sentiment_very_satisfied</mat-icon>
+        
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Adresse</mat-label>
+        <input #addresseInput matInput placeholder="Placeholder" placeholder="" name="adrCli"  [(ngModel)]="model.adrCli" >
+        <mat-icon matSuffix class="green-icon">home</mat-icon>
+        
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Telephone</mat-label>
+        <input #teleInput matInput placeholder="Placeholder" placeholder="" name="telCli"  [(ngModel)]="model.telCli" >
+        <mat-icon matSuffix class="green-icon">local_phone</mat-icon>
+        
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Ville</mat-label>
+        <input #villeInput matInput placeholder="Placeholder" placeholder=""  name="villeCli"  [(ngModel)]="model.villeCli">
+        <mat-icon matSuffix class="green-icon">map</mat-icon>
+        
+      </mat-form-field>
+      <button type="submit" mat-dialog-close  mat-raised-button color="primary" class="add-button">
+        Modifier
+    </button>
+</form>

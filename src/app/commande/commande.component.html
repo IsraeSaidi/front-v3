@@ -1,0 +1,34 @@
+<diV style="padding:10vh 10vw 0">
+    <mat-accordion   class="example-headers-align" multi>
+        <mat-expansion-panel class="panel" *ngFor="let client of ArrayClients">
+        <mat-expansion-panel-header>
+            <mat-panel-title style="color: rgb(47, 45, 45);font-size:1.3vw;">
+            {{client.nomCli}} {{client.preCli}} , {{client.codeCli}} 
+            </mat-panel-title>
+            <mat-panel-description style="color: rgb(47, 45, 45);font-size:1.3vw">
+            Commandes
+            <mat-icon>list_alt</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <br>
+        <mat-selection-list #shoes [multiple]="false">
+          <div  style="display: flex;justify-content: space-between;align-items: center;"  *ngFor="let commande of client.commandes" >
+            <mat-list-option (click)="getLigneCommandes(commande.numCmd)" >
+              <div style="display: flex;justify-content: space-between;align-items: center;" >
+              <p>Code : {{commande.numCmd}}</p>
+              <p>{{commande.dateCmd}}</p>
+
+            </div>
+            </mat-list-option>
+            <button (click)="deleteCmd(commande.numCmd)" style="background: #9B59B6;" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+          </mat-selection-list>
+          
+
+          
+        </mat-expansion-panel>
+    </mat-accordion>
+    
+</diV>

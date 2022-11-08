@@ -1,0 +1,30 @@
+<div style="margin: 22px;border-radius: 12px;">
+    <p style="text-align:center;font-family: 'Oleo Script Swash Caps';font-size: 30px">Livraison de fournisseur<span style="color:#9B59B6 ;"> {{codeFour}}</span>  </p>
+    <mat-divider></mat-divider>
+    <br>
+    <form (submit)="addLivraison()">
+    
+    
+        <mat-form-field appearance="fill">
+            <mat-label>Numero Livraison</mat-label>
+            <input #nomInput matInput placeholder="Placeholder" placeholder=""  name="numLiv"  [(ngModel)]="model.numLiv">
+            <mat-icon matSuffix class="green-icon">code</mat-icon>
+            
+          </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Date de Commande</mat-label>
+      <input matInput [matDatepicker]="picker" placeholder="" name="dateCmd"  [(ngModel)]="model.date">
+      
+      <mat-datepicker-toggle matSuffix [for]="picker" class="green-icon"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    
+          
+          <button type="submit" mat-dialog-close  mat-raised-button color="primary" class="add-button">
+            Ajouter
+        </button>
+    </form>
+    </div>
+    
+    
